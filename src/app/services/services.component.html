@@ -1,0 +1,54 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav class="side-nav" #sidenav mode="side" (keydown.escape)="sidenav.close()" [(opened)]="opened" disableClose>
+        <ul>
+            <li><button mat-button color="accent" (click)="displayAll()">Visual Abacus and Arithmetic</button></li>
+            <li><button mat-button color="accent">Vedic Maths</button></li>
+            <li><button mat-button color="accent">Calligraphy</button></li>
+            <li><button mat-button color="accent" (click)=onProgramStructure()>Program Structure</button></li>
+            <li><button mat-button color="accent" (click)=onBenefits()>Benefits</button></li>
+            <li><button mat-button color="accent" (click)=onFAQs()>FAQs</button></li>
+        </ul>
+    </mat-sidenav> 
+
+    <mat-sidenav-content class="side-nav-content">
+        <p>
+            <button mat-button (click)="sidenav.toggle()"><mat-icon>list</mat-icon></button>
+        </p>
+        <div class="content-container">
+            <h1>Abacus</h1>
+            <div class="description">
+                <h3>Taking learning to the Next Level</h3>
+            </div>
+            <div class="program">
+                <div class="program-container" *ngIf="programStructure">
+                    <h1>Program Structure</h1>
+                    <h3>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries, 
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </h3>
+                </div>
+                <div class="benefits" *ngIf="benefits">
+                    <h1>Benefits</h1>
+                    <div class="benifit-container">
+                        <h3>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        </h3>
+                    </div>
+                </div>
+                <div class="FAQs" *ngIf="FAQs">
+                    <h1>FAQs</h1>
+                    <div class="FAQ-container">
+                        <h3>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

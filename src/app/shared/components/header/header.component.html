@@ -1,0 +1,13 @@
+<div class="menu-header">
+    <a mat-button routerLink="/"><mat-icon>sensor_door</mat-icon>Home</a>
+    <a mat-button routerLink="/service"><mat-icon>design_services</mat-icon>Services</a>
+    <a mat-button [matMenuTriggerFor]="menu" *ngIf="!userIsAuthenticated"><mat-icon>account_box</mat-icon>Admin</a>
+    <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/login">Login</a>
+        <a mat-menu-item routerLink="/register">Register</a>
+    </mat-menu>
+    <span class="spacer"></span>
+    <a mat-button routerLink="/enquiry"><mat-icon>contacts</mat-icon>Enquire</a>
+    <a mat-button><mat-icon>info</mat-icon>About Us</a>
+    <button mat-button *ngIf="userIsAuthenticated" (click)="onLogout()">Logout</button>
+</div>

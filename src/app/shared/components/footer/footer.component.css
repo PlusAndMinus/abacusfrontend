@@ -1,0 +1,10 @@
+.footer-container {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    padding-right: 1rem;
+    color: #252526;
+}

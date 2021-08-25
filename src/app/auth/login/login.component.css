@@ -1,0 +1,25 @@
+mat-card {
+    height: 50vh;
+    background: url('https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    margin: 20px;
+}
+mat-form-field {
+    width: 40%;
+    margin-top: 20px;
+    background-color: #ced9eb;
+    border-radius: 0.5em
+}
+
+.form-container {
+    margin-left: 500px;
+}
+
+.btn {
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-start
+} 

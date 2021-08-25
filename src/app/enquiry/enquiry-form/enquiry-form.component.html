@@ -1,0 +1,31 @@
+<mat-card>
+    <form #enquiryForm="ngForm" (submit)="onPostEnquiry(enquiryForm)">
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" name="name" ngModel #nameInput="ngModel" required [(ngModel)]="sName">
+            <mat-error *ngIf="nameInput.invalid">Please enter your name</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" name="email" ngModel #emailInput="ngModel" required [(ngModel)]="sEmail">
+            <mat-error *ngIf="emailInput.invalid">Please enter a valid email</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Mobile</mat-label>
+            <input matInput name="mobile" type="text" ngModel #mobileInput="ngModel" required [(ngModel)]="sMobile">
+            <mat-error *ngIf="mobileInput.invalid">Please enter a valid number</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Course Interested In</mat-label>
+            <input matInput type="text" name="course" ngModel #courseInput="ngModel" required [(ngModel)]="sCourse">
+            <mat-error *ngIf="courseInput.invalid">Please enter the course you are looking for</mat-error>
+        </mat-form-field>
+        <br>
+        <div class="btn">
+            <button type="submit" mat-raised-button color="primary">Submit</button>
+        </div>
+    </form>
+</mat-card>

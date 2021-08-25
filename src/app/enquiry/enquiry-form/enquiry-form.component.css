@@ -1,0 +1,12 @@
+mat-card {
+    background-color: #eff5ed;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}

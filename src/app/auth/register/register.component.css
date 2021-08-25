@@ -1,0 +1,14 @@
+mat-card {
+    margin: auto;
+}
+mat-form-field {
+    width: 40%;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+

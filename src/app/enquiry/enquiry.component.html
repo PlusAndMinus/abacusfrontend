@@ -1,0 +1,8 @@
+<div class="enquiry-container">
+    <div class="enquiry-form">
+        <app-enquiry-form></app-enquiry-form>
+    </div>
+    <div class="enquiry-list" *ngIf="userIsAuthenticated">
+        <app-enquiry-list></app-enquiry-list>
+    </div>
+</div>

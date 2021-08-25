@@ -1,0 +1,33 @@
+<mat-card>
+    <div class="form-container">
+    <form #registerForm="ngForm" (submit)="onRegister(registerForm)">
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" name="firstname" ngModel #firstName="ngModel" required>
+            <mat-error *ngIf="firstName.invalid">Please enter first name</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" name="lastname" ngModel #lastName="ngModel" required>
+            <mat-error *ngIf="lastName.invalid">Please enter last name</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput name="email" type="email" ngModel #emailInput="ngModel" required email>
+            <mat-error *ngIf="emailInput.invalid">Please enter a valid email</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-field" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" name="password" ngModel #passwordInput="ngModel" required>
+            <mat-error *ngIf="passwordInput.invalid">Please enter a valid password</mat-error>
+        </mat-form-field>
+        <br>
+        <div class="btn">
+            <button type="submit" mat-raised-button>Register</button>
+        </div>
+    </form>
+</div>
+</mat-card>
